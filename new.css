@@ -1,0 +1,49 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom styles for dropdowns */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 50;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    min-width: 200px;
+}
+.dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    color: #374151; /* gray-700 */
+}
+.dropdown-menu a:hover {
+    background-color: #f3f4f6; /* gray-100 */
+}
+/* Simple hero slider animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.hero-slide {
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* Fixed apply buttons */
+.fixed-apply {
+    position: fixed;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: bottom right;
+    z-index: 40;
+}
+.fixed-admission {
+    position: fixed;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: bottom left;
+    z-index: 40;
+}

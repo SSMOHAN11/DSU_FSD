@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top University in Bangalore | Dayananda Sagar University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for dropdowns */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            z-index: 50;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            min-width: 200px;
+        }
+        .dropdown-menu a {
+            padding: 0.75rem 1.5rem;
+            display: block;
+            color: #374151; /* gray-700 */
+        }
+        .dropdown-menu a:hover {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        /* Simple hero slider animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero-slide {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        /* Fixed apply buttons */
+        .fixed-apply {
+            position: fixed;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            transform-origin: bottom right;
+            z-index: 40;
+        }
+        .fixed-admission {
+            position: fixed;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: bottom left;
+            z-index: 40;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- 1. Top Bar -->
+    <div class="bg-blue-800 text-white text-sm py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <a href="#" class="hover:underline">Careers</a>
+                <a href="#" class="hover:underline">Virtual Tour</a>
+                <a href="#" class="hover:underline">Examination</a>
+                <a href="#" class="hover:underline">News & Events</a>
+                <a href="#" class="hover:underline">Alumni</a>
+                <a href="#" class="hover:underline">ERP Login</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-yellow-500 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold hover:bg-yellow-400">NRI/Foreign Admissions</a>
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-globe"></i>
+                    <select class="bg-transparent border-none text-white outline-none">
+                        <option value="en" class="text-black">English</option>
+                        <option value="hi" class="text-black">हिन्दी</option>
+                        <option value="kn" class="text-black">ಕನ್ನಡ</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <img src="https://placehold.co/200x60/003366/FFFFFF?text=DSU+Logo" alt="DSU Logo" class="h-12 md:h-16">
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-blue-900 focus:outline-none">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+
+            <!-- Main Navigation (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <div class="dropdown relative">
+                    <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">University</a>
+                    <div class="dropdown-menu">
+                        <a href="#">About DSU</a>
+                        <a href="#">Leadership</a>
+                        <a href="#">Administration</a>
+                        <a href="#">UGC Information</a>
+                        <a href="#">Recognition</a>
+                    </div>
+                </div>
+                <div class="dropdown relative">
+                    <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Academics</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Schools</a>
+                        <a href="#">Undergraduate</a>
+                        <a href="#">Postgraduate</a>
+                        <a href="#">Online Education</a>
+                    </div>
+                </div>
+                <div class="dropdown relative">
+                    <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Admissions</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Admission Details</a>
+                        <a href="#">Course, Eligibility & Fee</a>
+                        <a href="#">Hostel Fee</a>
+                    </div>
+                </div>
+                <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">International</a>
+                <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Research</a>
+                <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Innovation</a>
+                <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Placement</a>
+                <a href="#" class="text-blue-900 font-semibold hover:text-yellow-500">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4 border-t">
+            <a href="#" class="block py-2 text-blue-900 font-semibold">University</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Academics</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Admissions</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">International</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Research</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Innovation</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Placement</a>
+            <a href="#" class="block py-2 text-blue-900 font-semibold">Contact</a>
+        </div>
+    </header>
+
+    <!-- 3. Fixed Apply/Admission Buttons -->
+    <button class="fixed-apply bg-yellow-500 text-blue-900 font-bold px-6 py-3 rounded-t-lg shadow-lg hover:bg-yellow-400">Apply Now</button>
+    <button class="fixed-admission bg-blue-800 text-white font-bold px-6 py-3 rounded-t-lg shadow-lg hover:bg-blue-700">Admission</button>
+
+    <!-- 4. Hero Section -->
+    <div class="hero-slide w-full h-[60vh] bg-cover bg-center relative" style="background-image: url('https://placehold.co/1600x700/003366/FFFFFF?text=Welcome+to+DSU');">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-4 h-full flex flex-col justify-center items-start text-white relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Top University in Bangalore</h1>
+            <p class="text-xl md:text-2xl mb-8">Dayananda Sagar University</p>
+            <a href="#" class="bg-yellow-500 text-blue-900 font-bold px-8 py-3 rounded-lg text-lg hover:bg-yellow-400 transition duration-300">
+                Admissions Open 2026
+            </a>
+        </div>
+    </div>
+
+    <!-- 5. Announcements Section -->
+    <div class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-8">Announcements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Announcement Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-blue-800 mb-2">CJMC Admissions</h3>
+                    <p class="text-gray-600 text-sm">Admissions open for: Journalism, Advertising & PR, Video Production.</p>
+                    <a href="#" class="text-blue-600 hover:underline text-sm mt-4 inline-block">Read more &rarr;</a>
+                </div>
+                <!-- Announcement Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-blue-800 mb-2">BUSINESS APPLICATIONS OF AI/ML</h3>
+                    <p class="text-gray-600 text-sm">Unique 'Reverse Engineer Pedagogy' that teaches hands-on AI, ML.</p>
+                    <a href="#" class="text-blue-600 hover:underline text-sm mt-4 inline-block">Read more &rarr;</a>
+                </div>
+                <!-- Announcement Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-blue-800 mb-2">PGCET & DSAT</h3>
+                    <p class="text-gray-600 text-sm">School of commerce and Management studies Welcomes the full time MBA students.</p>
+                    <a href="#" class="text-blue-600 hover:underline text-sm mt-4 inline-block">Read more &rarr;</a>
+                </div>
+                <!-- Announcement Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-blue-800 mb-2">AIC-DSU Innovation</h3>
+                    <p class="text-gray-600 text-sm">AIC-DSU Innovation Foundation is an Innovation Center that strives to nurture talent.</p>
+                    <a href="#" class="text-blue-600 hover:underline text-sm mt-4 inline-block">Read more &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. DSU Differentiator Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">DSU DIFFERENTIATOR</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Differentiator Card -->
+                <div class="text-center p-6">
+                    <i class="fas fa-book-open text-blue-800 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Curriculum</h3>
+                    <p class="text-gray-600">Our curriculum is developed with our philosophy for quality education, coherence in learning, and integrates education with experience.</p>
+                </div>
+                <!-- Differentiator Card -->
+                <div class="text-center p-6">
+                    <i class="fas fa-users text-blue-800 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Board of Studies</h3>
+                    <p class="text-gray-600">Guided by a Board of Studies (BOS) with an eclectic mix of theoreticians and practitioners from academia and industry.</p>
+                </div>
+                <!-- Differentiator Card -->
+                <div class="text-center p-6">
+                    <i class="fas fa-chalkboard-teacher text-blue-800 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Teaching Learning Process</h3>
+                    <p class="text-gray-600">We embrace the active learning paradigm for the delivery of our lectures. Learning never stops at DSU.</p>
+                </div>
+                <!-- Differentiator Card -->
+                <div class="text-center p-6">
+                    <i class="fas fa-industry text-blue-800 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Industry Driven Academics</h3>
+                    <p class="text-gray-600">Industry leaders have set up training academies on campus to train students in the latest technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. News and Events -->
+    <div class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">NEWS AND EVENTS</h2>
+            <div class="max-w-4xl mx-auto">
+                <ul class="space-y-4">
+                    <li class="bg-white p-4 rounded-lg shadow flex justify-between items-center">
+                        <span class="text-gray-700">Five Days FDP on “Entangle 25: A Hands-on Workshop on Quantum Computing”</span>
+                        <span class="text-sm font-semibold text-blue-700">New</span>
+                    </li>
+                    <li class="bg-white p-4 rounded-lg shadow flex justify-between items-center">
+                        <span class="text-gray-700">DevHack 2.0 Hackathon</span>
+                        <span class="text-sm font-semibold text-blue-700">New</span>
+                    </li>
+                    <li class="bg-white p-4 rounded-lg shadow flex justify-between items-center">
+                        <span class="text-gray-700">ICTAHS - 2025 on 13th November 2025</span>
+                        <span class="text-sm font-semibold text-blue-700">Upcoming</span>
+                    </li>
+                    <li class="bg-white p-4 rounded-lg shadow flex justify-between items-center">
+                        <span class="text-gray-700">"DSU - 8th Annual Convocation - 2024" On 28th October 2024</span>
+                        <span class="text-sm font-semibold text-gray-500">Past</span>
+                    </li>
+                </ul>
+                <div class="text-center mt-8">
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">View All News & Events &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Leadership Section -->
+    <div class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-blue-900 text-center mb-12">Leadership</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Leadership Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300/EBF8FF/003366?text=Portrait" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg" alt="Late Shri R Dayananda Sagar">
+                    <h3 class="text-xl font-semibold text-gray-800">Late Shri R Dayananda Sagar</h3>
+                    <p class="text-gray-500">Founding Father</p>
+                </div>
+                <!-- Leadership Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300/EBF8FF/003366?text=Portrait" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg" alt="Late Smt Chandramma Sagar">
+                    <h3 class="text-xl font-semibold text-gray-800">Late Smt Chandramma Sagar</h3>
+                    <p class="text-gray-500">Wife of the Founder</p>
+                </div>
+                <!-- Leadership Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300/EBF8FF/003366?text=Portrait" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg" alt="Dr. D Hemachandra Sagar">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. D Hemachandra Sagar</h3>
+                    <p class="text-gray-500">Chancellor</p>
+                </div>
+                <!-- Leadership Card -->
+                <div class="text-center">
+                    <img src="https://placehold.co/300x300/EBF8FF/003366?text=Portrait" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg" alt="Dr. D Premachandra Sagar">
+                    <h3 class="text-xl font-semibold text-gray-800">Dr. D Premachandra Sagar</h3>
+                    <p class="text-gray-500">Pro Chancellor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Footer -->
+    <footer class="bg-blue-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h5 class="text-white font-semibold text-lg mb-4">About</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-400">The University</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Vision & Mission</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">News & Events</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Research</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Important Info -->
+                <div>
+                    <h5 class="text-white font-semibold text-lg mb-4">Important Info</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-400">IQAC</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">DSU University ACT</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">RTI Act 2005</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">CET Code: E240</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Comed-K Code: E182</a></li>
+                    </ul>
+                </div>
+
+                <!-- Schools -->
+                <div>
+                    <h5 class="text-white font-semibold text-lg mb-4">Schools</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-400">School of Engineering</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">School of Computer Applications</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">School of Commerce & Management</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">School of Law</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">School of Health Sciences</a></li>
+                    </ul>
+                </div>
+
+                <!-- Admissions -->
+                <div>
+                    <h5 class="text-white font-semibold text-lg mb-4">Admissions</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-400">Admissions details</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">DSAT Admissions</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Direct Admissions</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Course Eligibility & Fee</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h5 class="text-white font-semibold text-lg mb-4">Admissions Helpline</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li>Phone: 080 46461800</li>
+                        <li>Phone: +91 6366885507</li>
+                        <li>E-mail: admissions@dsu.edu.in</li>
+                    </ul>
+                    <h5 class="text-white font-semibold text-lg mb-4 mt-4">NRI / Foreign</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li>Phone: +91 9606022152</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Address & Social -->
+            <div class="border-t border-blue-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-sm mb-4 md:mb-0">
+                        <p class="font-semibold">DSU City Innovation Campus (Main Admission Office)</p>
+                        <p>Kudlu Gate, Hosur Road, Bengaluru - 560 114</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-2xl"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 text-2xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-xs text-gray-400 border-t border-blue-700 pt-6 mt-8">
+                Copyright © 2025 DSU. All Rights Reserved | Privacy Policy
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
